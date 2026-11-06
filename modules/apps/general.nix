@@ -19,7 +19,7 @@
   flake.modules.homeManager."apps/general" = { pkgs, ... }: {
     my-nixos.homePackages = {
       inherit (pkgs) picard feishin opus-tools lrcget imagemagick yt-dlp
-        android-tools brave qbittorrent libreoffice-qt6-fresh keepassxc komikku;
+        android-tools qbittorrent libreoffice-qt6-fresh keepassxc komikku;
     };
   };
 }
