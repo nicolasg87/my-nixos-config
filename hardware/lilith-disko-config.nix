@@ -50,25 +50,27 @@
                         "noatime"
                       ];
                     };
+                    # nodatacow não é definido por mount option: opções de mount
+                    # do btrfs são filesystem-wide e só valem do primeiro
+                    # subvolume montado (@). Onde importa, o NOCOW é aplicado
+                    # por arquivo/diretório: swapfile via mkswapfile (NixOS) e
+                    # @images via chattr +C (virtualization/virt-manager).
                     "@swap" = {
                       mountpoint = "/swap";
                       mountOptions = [
                         "noatime"
-                        "nodatacow"
                       ];
                     };
                     "@containers" = {
                       mountpoint = "/var/lib/containers";
                       mountOptions = [
                         "noatime"
-                        "nodatacow"
                       ];
                     };
                     "@images" = {
                       mountpoint = "/var/lib/libvirt/images";
                       mountOptions = [
                         "noatime"
-                        "nodatacow"
                       ];
                     };
                   };
