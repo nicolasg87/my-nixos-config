@@ -18,6 +18,7 @@
       inputs.self.modules.nixos."system/keyboard"
       inputs.self.modules.nixos."system/pipewire"
       inputs.self.modules.nixos."system/zram"
+      inputs.self.modules.nixos."system/disk-health"
       inputs.self.modules.nixos."system/fonts"
       inputs.self.modules.nixos."system/nix-ld"
       inputs.self.modules.nixos."system/devenv"
@@ -29,6 +30,7 @@
       inputs.self.modules.nixos."apps/general"
       inputs.self.modules.nixos."apps/emacs"
       inputs.self.modules.nixos."apps/ente-auth"
+      inputs.self.modules.nixos."apps/browsers/vivaldi"
 
       # Fase 4 — aspectos de desktop/ (só os enable = true)
       inputs.self.modules.nixos."desktop/mango"
@@ -159,6 +161,7 @@
             inputs.self.modules.homeManager."apps/mpv"
             inputs.self.modules.homeManager."apps/general"
             inputs.self.modules.homeManager."apps/browsers/firefox"
+	    inputs.self.modules.homeManager."apps/browsers/vivaldi"
           ];
         };
       }
